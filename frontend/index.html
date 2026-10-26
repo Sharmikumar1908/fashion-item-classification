@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fashion Item Classification</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Fashion Item Classification</h1>
+
+        <p class="subtitle">
+            Upload a fashion image and let the deep learning model classify it.
+        </p>
+
+
+        <!-- Upload Section -->
+
+        <div class="upload-box">
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
+
+            <label for="imageInput"
+                   class="upload-button">
+                Choose Fashion Image
+            </label>
+
+        </div>
+
+
+        <!-- Image Preview -->
+
+        <div class="preview-container">
+
+            <img
+                id="previewImage"
+                src=""
+                alt="Image Preview"
+            >
+
+        </div>
+
+
+        <!-- Predict Button -->
+
+        <button
+            id="predictButton"
+            onclick="predictImage()">
+
+            PREDICT
+
+        </button>
+
+
+        <!-- Loading -->
+
+        <div id="loading">
+
+            Predicting...
+
+        </div>
+
+
+        <!-- Result -->
+
+        <div
+            id="result"
+            class="result-box">
+
+            <h2>Prediction Result</h2>
+
+            <p>
+                Fashion Item:
+                <span id="prediction">---</span>
+            </p>
+
+            <p>
+                Confidence:
+                <span id="confidence">---</span>
+            </p>
+
+        </div>
+
+
+        <!-- Error -->
+
+        <div
+            id="error"
+            class="error">
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
